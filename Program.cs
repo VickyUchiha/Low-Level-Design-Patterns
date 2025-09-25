@@ -6,7 +6,9 @@ namespace DPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Design Patterns in C#");
+            CommonClass obj = new CommonClass();
+            obj.display();
+            obj.show();
             
         }
     }
