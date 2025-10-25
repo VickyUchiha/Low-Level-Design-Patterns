@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace DPatterns
 {
@@ -6,9 +7,13 @@ namespace DPatterns
     {
         static void Main(string[] args)
         {
-            CommonClass obj = new CommonClass();
-            obj.display();
-            obj.show();
+            var parkingLot = new ParkingLot(2, 2, 2, 1);
+            var manager = new ParkingManager(parkingLot);
+
+            var bike = new Bike { LicensePlate = "TN01BU9794", Color = "black" };
+            var car = new Car { LicensePlate = "TN09AB1234", Color = "Red" };
+
+            manager.ParkVehicle(bike);
             
         }
     }
