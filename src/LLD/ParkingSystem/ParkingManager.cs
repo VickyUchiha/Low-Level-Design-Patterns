@@ -43,7 +43,7 @@ public class ParkingManager
     }
     ticket.ExitTime = DateTime.Now;
     var duration = (ticket.ExitTime.Value - ticket.EntryTime).TotalHours;
-    var rate = GetRate(ticket.Vehicle.VehicleType);
+        var rate = ticket.Vehicle.ParkingChargeStrategy.CalculateCharge((decimal)duration);
     ticket.AmountPaid = (decimal)duration * rate;
 
     foreach (var floor in ParkingLot.ParkingFloors)
