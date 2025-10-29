@@ -8,7 +8,7 @@ namespace DPatterns.src.LLD.DPatterns
 {
     public class Repository
     {
-        public static void Main(string[] args)
+        public static void NotMain(string[] args)
         {
             EmployeeRepository _employeeRepository = new EmployeeRepository();
             _employeeRepository.Add(new Employee() { EmpId = 1, EmpName = "A", Salary = 1000 });
